@@ -16,7 +16,7 @@ use yii\web\AssetBundle;
  *
  * @author Alexander Stepanov <student_vmk@mail.ru>
  */
-class IFrameResizerAsset extends AssetBundle
+class IFrameResizerContentAsset extends AssetBundle
 {
     public $sourcePath = '@bower/iframe-resizer/js';
     
@@ -24,7 +24,7 @@ class IFrameResizerAsset extends AssetBundle
     
     public $js = [  
         // Configured conditionally (source/minified) during init()
-        YII_DEBUG ? 'iframeResizer.js' : 'iframeResizer.min.js',
+        YII_DEBUG ? 'iframeResizer.contentWindow.js' : 'iframeResizer.contentWindow.min.js',
     ];
     
     public $depends = [];   // There's a native version as well, so jQuery dependency is not specified by default
